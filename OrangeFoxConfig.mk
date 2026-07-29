@@ -4,11 +4,13 @@
 OF_MAINTAINER_PATCH_VERSION := 1
 OF_MAINTAINER := dontknowhy
 # 这里的 1 代表这是第一个编译版本
-OF_MAINTAINER_AVATAR := device/xiaomi/certus/avatar/avatar.png
+OF_MAINTAINER_AVATAR := $(DEVICE_PATH)/avatar/avatar.png
 # ==========================================
 # 2. 屏幕与UI配置 (【必改】请根据你机型修改)
 # ==========================================
-# Redmi 12C 是 720x1650 的屏幕。如果你是别的手机，请查清楚分辨率高度
+# Redmi 6/6a 是 720x1440 的屏幕。如果你是别的手机，请查清楚分辨率高度
+# https://www.cnblogs.com/mmjio/p/20034307
+# **OF_SCREEN_H不是正常的分辨率，得自己算**
 OF_SCREEN_H := 2160
 OF_SCREEN_W := 720
 
@@ -28,7 +30,7 @@ OF_CLOCK_POS := 1
 OF_ALLOW_DISABLE_NAVBAR := 0
 
 # 导航栏高度
-OF_NAVIGATION_BAR_HEIGHT := 48
+OF_NAVIGATION_BAR_HEIGHT := 30
 
 # ==========================================
 # 3. 核心功能
@@ -38,6 +40,7 @@ OF_USE_MAGISKBOOT_FOR_ALL_PATCHES := 0
 OF_NO_RELOAD_MAGISKBOOT := 1
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 OF_NO_MIUI_PATCH_WARNING := 1
+FOX_ENABLE_APP_MANAGER=1
 
 # ==========================================
 # 4. 【关键】Android 12+ 解密与防砖配置
