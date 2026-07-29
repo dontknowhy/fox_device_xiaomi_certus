@@ -10,6 +10,7 @@ OF_MAINTAINER_AVATAR := device/xiaomi/certus/avatar/avatar.png
 # ==========================================
 # Redmi 12C 是 720x1650 的屏幕。如果你是别的手机，请查清楚分辨率高度
 OF_SCREEN_H := 1440
+OF_SCREEN_W := 720
 
 # 状态栏高度：这是为了避让刘海/水滴屏出现奇奇怪怪的问题
 OF_STATUS_H := 65
