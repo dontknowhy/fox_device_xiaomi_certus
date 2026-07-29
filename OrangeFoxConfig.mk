@@ -9,8 +9,10 @@ OF_MAINTAINER_AVATAR := device/xiaomi/certus/avatar/avatar.png
 # 2. 屏幕与UI配置 (【必改】请根据你机型修改)
 # ==========================================
 # Redmi 12C 是 720x1650 的屏幕。如果你是别的手机，请查清楚分辨率高度
-OF_SCREEN_H := 1440
+OF_SCREEN_H := 2160
 OF_SCREEN_W := 720
+
+OF_USE_COMPACT_SIZE := 1
 
 # 状态栏高度：这是为了避让刘海/水滴屏出现奇奇怪怪的问题
 OF_STATUS_H := 65
@@ -24,6 +26,9 @@ OF_CLOCK_POS := 1
 
 # 允许在设置里禁用导航栏
 OF_ALLOW_DISABLE_NAVBAR := 0
+
+# 导航栏高度
+OF_NAVIGATION_BAR_HEIGHT := 48
 
 # ==========================================
 # 3. 核心功能
