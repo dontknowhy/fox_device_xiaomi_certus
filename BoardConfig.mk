@@ -1,4 +1,4 @@
-#
+q#
 # Copyright (C) 2023 The Android Open Source Project
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 #
@@ -35,7 +35,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mt6765
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 280
 
 # Boot Image
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -115,6 +115,10 @@ TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_MAX_BRIGHTNESS := 255
+TW_BATTERY_PATH := /sys/class/power_supply/battery
+TW_BATTERY_CAPACITY_FILE := capacity
+TW_BATTERY_STATUS_FILE := status
+TW_USE_LEGACY_BATTERY_READ := true
 
 # fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
