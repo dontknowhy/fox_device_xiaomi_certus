@@ -83,6 +83,9 @@ BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+FOX_SYSTEM_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/system
+FOX_VENDOR_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/vendor
+FOX_RECOVERY_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/recovery
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
@@ -117,8 +120,13 @@ TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_MAX_BRIGHTNESS := 255
+# 写这个注释的时候电池检测依然是坏的，听AI说貌似下面这些有新旧两个方案，旧方案已被废除但貌似不会报错，两个都加
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
+TW_BATTERY_PATH := /sys/class/power_supply/battery
+TW_BATTERY_CAPACITY_FILE := capacity
+TW_BATTERY_STATUS_FILE := status
 TW_BATTERY_SYSFS_WAIT_SECONDS := 5
+TW_BATTERY_SYSFS_WAIT_FOR_STATUS := true
 TW_FRAMERATE := 60
 
 # fstab
