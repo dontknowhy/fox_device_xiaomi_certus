@@ -104,7 +104,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # TWRP Configuration
-#TW_THEME := portrait_mdpi
+TW_THEME := portrait_hdpi
 BOARD_HAS_LARGE_FILESYSTEM := true
 TW_DEVICE_VERSION := 0 by Hadenix
 TW_EXTRA_LANGUAGES := true
