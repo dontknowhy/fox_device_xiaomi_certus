@@ -83,9 +83,6 @@ BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
-FOX_SYSTEM_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/system
-FOX_VENDOR_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/vendor
-FOX_RECOVERY_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/recovery
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
@@ -132,5 +129,3 @@ TW_FRAMERATE := 60
 # fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
-# OrangeFox
--include $(DEVICE_PATH)/OrangeFoxConfig.mk
