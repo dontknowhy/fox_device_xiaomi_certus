@@ -5,6 +5,7 @@
 add_lunch_combo twrp_certus-user
 add_lunch_combo twrp_certus-userdebug
 add_lunch_combo twrp_certus-eng
+CURRENT_DIR=$(cd "$(dirname $0)";pwd)
 
 # ==========================================
 # 1. 基础信息
@@ -12,7 +13,7 @@ add_lunch_combo twrp_certus-eng
 export OF_MAINTAINER_PATCH_VERSION=1
 export OF_MAINTAINER=dontknowhy
 # 这里的 1 代表这是第一个编译版本
-export OF_MAINTAINER_AVATAR=${DEVICE_PATH}/avatar/avatar.png
+export OF_MAINTAINER_AVATAR="$CURRENT_DIR"/avatar/avatar.png
 export FOX_SYSTEM_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/system
 export FOX_VENDOR_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/vendor
 export FOX_RECOVERY_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/recovery
